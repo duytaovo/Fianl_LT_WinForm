@@ -10,4 +10,4 @@ D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Deb
 D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.CoreCompileInputs.cache
 D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.exe
 D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.pdb
-D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmQuanLySV.resources
+D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmQuanLy.resources

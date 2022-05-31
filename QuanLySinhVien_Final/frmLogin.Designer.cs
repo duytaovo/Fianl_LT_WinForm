@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ckbHienthimk = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -45,6 +46,7 @@
             this.btnCancel.TabIndex = 20;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnLogin
             // 
@@ -54,6 +56,7 @@
             this.btnLogin.TabIndex = 19;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // txtPass
             // 
@@ -102,12 +105,24 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "SYSTEM LOGIN";
             // 
+            // ckbHienthimk
+            // 
+            this.ckbHienthimk.AutoSize = true;
+            this.ckbHienthimk.Location = new System.Drawing.Point(582, 186);
+            this.ckbHienthimk.Name = "ckbHienthimk";
+            this.ckbHienthimk.Size = new System.Drawing.Size(82, 17);
+            this.ckbHienthimk.TabIndex = 21;
+            this.ckbHienthimk.Text = "HIển thị MK";
+            this.ckbHienthimk.UseVisualStyleBackColor = true;
+            this.ckbHienthimk.CheckedChanged += new System.EventHandler(this.ckbHienthimk_CheckedChanged);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(866, 356);
+            this.Controls.Add(this.ckbHienthimk);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPass);
@@ -133,5 +148,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox ckbHienthimk;
     }
 }
