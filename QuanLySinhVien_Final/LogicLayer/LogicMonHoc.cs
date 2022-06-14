@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using QuanLySinhVien_Final.DBLayer;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using QuanLySinhVien_Final.DBLayer;
-using QuanLySinhVien_Final.ClassQuanLy;
 
 namespace QuanLySinhVien_Final.LogicLayer
 {
@@ -30,7 +23,7 @@ namespace QuanLySinhVien_Final.LogicLayer
             return db.ExcuteQueryDataSet("Select * From MonHoc", CommandType.Text);
         }
 
-        public bool ThemMonHoc(string MaMonHoc, string TenMonHoc,int SoTinChi, ref string err)
+        public bool ThemMonHoc(string MaMonHoc, string TenMonHoc, int SoTinChi, ref string err)
         {
             string sqlString = null;
             //string query = string.Format("Insert Into MonHoc(maMH,tenMH,soTinChi) VALUES (N'{0}', N'{1}', N'{2}')", MaMonHoc, TenMonHoc, SoTinChi);
@@ -44,7 +37,7 @@ namespace QuanLySinhVien_Final.LogicLayer
 
         public bool CapNhatMonHoc(string MaMonHoc, string TenMonHoc, int SoTinChi, ref string err)
         {
-            string query = string.Format("Update MonHoc Set tenMH = N'{1}', " +" soTinChi=N'{2}' " +
+            string query = string.Format("Update MonHoc Set tenMH = N'{1}', " + " soTinChi=N'{2}' " +
                 "                                           WHERE maMH = {0}", MaMonHoc, TenMonHoc, SoTinChi);
             //string sqlString = "Update MonHoc Set maMH=N'" + MaMonHoc +"',tenMH=N'" + TenMonHoc  + "Where maMH = '" + MaMonHoc + "'";
 
@@ -60,12 +53,6 @@ namespace QuanLySinhVien_Final.LogicLayer
 
         }
 
-        public DataTable SearchMonHocByName(string TenMonHoc )
-        {
-            string sqlString = "Select * From MonHoc Where tenMH Like '%"+ TenMonHoc + "%'";
-            //string query = string.Format("SELECT * FROM MonHoc WHERE tenMH LIKE N'%' + N'{0}' + '%'", TenMonHoc);
 
-            return db.ExcuteQueryDataSet(sqlString, CommandType.Text);
-        }
     }
 }
