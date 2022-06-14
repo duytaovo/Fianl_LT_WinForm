@@ -34,7 +34,6 @@ namespace QuanLySinhVien_Final.LogicLayer
         public bool ThemKhoa(int MaKhoa, string TenKhoa, int namBatDau, int namKetThuc, ref string err)
         {
             string sqlString = null;
-            //string query = string.Format("Insert Into MonHoc(maMH,tenMH,soTinChi) VALUES (N'{0}', N'{1}', N'{2}')", MaMonHoc, TenMonHoc, SoTinChi);
 
             sqlString = "Insert Into Khoa Values('" +
                                              MaKhoa + "',N'" +
@@ -43,21 +42,21 @@ namespace QuanLySinhVien_Final.LogicLayer
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
         }
 
+        public bool CapNhatKhoa(int MaKhoa, string TenKhoa, int namBatDau, int namKetThuc, ref string err)
+        {
+            string query = string.Format("Update Khoa Set tenKhoa = N'{1}', " + " namBatDau='{2}' " + " namKetThuc='{3}' "+
+                "                                           WHERE maKhoa = {0}", MaKhoa, TenKhoa, namBatDau,namKetThuc);
+
+            return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
+        }
         public bool XoaKhoa(string MaKhoa, ref string err)
         {
-            //string query = string.Format("Delete From MonHoc Where maMH = {0}", MaMonHoc);
             string sqlString = "Delete From Khoa Where maKhoa='" + MaKhoa + "'";
 
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
 
-        public DataTable SearchMonHocByName(string TenMonHoc)
-        {
-            string sqlString = "Select * From MonHoc Where tenMH Like '%" + TenMonHoc + "%'";
-            //string query = string.Format("SELECT * FROM MonHoc WHERE tenMH LIKE N'%' + N'{0}' + '%'", TenMonHoc);
-
-            return db.ExcuteQueryDataSet(sqlString, CommandType.Text);
-        }
+        
     }
 }
