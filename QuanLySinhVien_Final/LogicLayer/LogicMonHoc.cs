@@ -53,6 +53,14 @@ namespace QuanLySinhVien_Final.LogicLayer
 
         }
 
+        public DataTable SearchMonHocByName(string TenMonHoc)
+        {
+            string sqlString = "Select * From MonHoc Where tenMH Like '%" + TenMonHoc + "%'";
+            //string query = string.Format("SELECT * FROM MonHoc WHERE tenMH LIKE N'%' + N'{0}' + '%'", TenMonHoc);
+            return db.ExcuteQueryDataSet(sqlString, CommandType.Text);
+        }
+
+
 
     }
 }

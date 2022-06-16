@@ -14,7 +14,7 @@ namespace QuanLySinhVien_Final
     public partial class frmQuanLy : Form
     {
         string err;
-
+        bool Them;
         DataTable dtSinhVien = null;
         LogicSinhVien dbSinhVien = new LogicSinhVien();
 
@@ -84,27 +84,80 @@ namespace QuanLySinhVien_Final
         }
         private void btnThemSV_Click(object sender, EventArgs e)
         {
-            if (this.txtMaSV.Text.Trim().Equals("") && this.txtEmail.Text.Trim().Equals("") && this.txtDiaChi.Text.Trim().Equals(""))
+            Them = true;
+
+            this.txtMaSV.Enabled = true;
+            this.txtMaLop.Enabled = true;
+            this.txtDiaChi.Enabled = true;
+            this.txtDienThoai.Enabled = true;
+            this.txtEmail.Enabled = true;
+            this.txtGioiTinh.Enabled = true;
+            this.txtMatKhau.Enabled = true;
+            this.txtHoTenSV.Enabled = true;
+
+            this.txtMaSV.ResetText();
+            this.txtMaLop.ResetText();
+            this.txtDiaChi.ResetText();
+            this.txtDienThoai.ResetText();
+            this.txtEmail.ResetText();
+            this.txtGioiTinh.ResetText();
+            this.txtHoTenSV.ResetText();
+            this.txtMatKhau.ResetText();
+
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+
+            btnThemSV.Enabled = false;
+            btnSuaSV.Enabled = false;
+            btnXoaSV.Enabled = false;
+
+            txtMaSV.Focus();
+        }
+
+        private void btnLuu_SV_Click(object sender, EventArgs e)
+        {
+            if (!txtMaSV.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Vui lòng nhập thông tin ");
-                txtMaSV.Focus();
+                if (Them)
+                {
+                    try
+                    {
+                        LogicSinhVien addSV = new LogicSinhVien();
+                        addSV.ThemSinhVien(this.txtMaSV.Text, this.txtMaLop.Text, this.txtEmail.Text, this.txtMatKhau.Text, this.txtHoTenSinhVien.Text, this.txtGioiTinh.Text, this.txtDienThoai.Text, this.txtDiaChi.Text, ref err);
+                        loadSinhViens();
+                        MessageBox.Show("Đã thêm xong!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thêm được. Lỗi rồi!");
+
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        LogicSinhVien capNhatSV = new LogicSinhVien();
+                        capNhatSV.CapNhatSinhVien(this.txtMaSV.Text, this.txtMaLop.Text, this.txtEmail.Text, this.txtMatKhau.Text, this.txtHoTenSinhVien.Text, this.txtGioiTinh.Text, this.txtDienThoai.Text, this.txtDiaChi.Text, ref err);
+                        loadSinhViens();
+                        MessageBox.Show("Cập nhật sinh vien thành công!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Có lỗi khi cập nhật môn học");
+
+
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    LogicSinhVien addSV = new LogicSinhVien();
-                    addSV.ThemSinhVien(this.txtMaSV.Text, this.txtMaLop.Text, this.txtEmail.Text,this.txtMatKhau.Text, this.txtHoTenSinhVien.Text, this.txtGioiTinh.Text, this.txtDienThoai.Text, this.txtDiaChi.Text, ref err);
-                    loadSinhViens();
-                    MessageBox.Show("Đã thêm xong!");
-                }
-                catch
-                {
-                    MessageBox.Show("Không thêm được. Lỗi rồi!");
-
-                }
+                MessageBox.Show("Thành phố chưa có. Lỗi rồi!");
+                txtMaSV.Focus();
             }
         }
+
+
         private void btnSuaSV_Click(object sender, EventArgs e)
         {
             if (this.txtMaSV.Text.Trim().Equals("") && this.txtEmail.Text.Trim().Equals("") && this.txtDiaChi.Text.Trim().Equals(""))
@@ -128,6 +181,25 @@ namespace QuanLySinhVien_Final
 
                 }
             }
+        }
+
+        private void btnHuy_SV_Click(object sender, EventArgs e)
+        {
+            this.txtMaSV.ResetText();
+            this.txtMaLop.ResetText();
+            this.txtDiaChi.ResetText();
+            this.txtDienThoai.ResetText();
+            this.txtEmail.ResetText();
+            this.txtGioiTinh.ResetText();
+            this.txtHoTenSV.ResetText();
+            this.txtMatKhau.ResetText();
+
+            btnThemSV.Enabled = true;
+            btnSuaSV.Enabled = true;
+            btnXoaSV.Enabled = true;
+
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
         }
         private void btnXoaSV_Click(object sender, EventArgs e)
         {
@@ -214,30 +286,70 @@ namespace QuanLySinhVien_Final
         }*/
         private void btnAddMonHoc_Click(object sender, EventArgs e)
         {
-            if (this.txtMaMonHoc.Text.Trim().Equals("") && this.txtTenMonHoc.Text.Trim().Equals(""))
+            Them = true;
+
+            txtMaMonHoc.Enabled = true;
+            txtTenMonHoc.Enabled = true;
+            txtSoTinChiMonHoc.Enabled = true;
+
+            txtMaMonHoc.ResetText();
+            txtTenMonHoc.ResetText();
+            txtSoTinChiMonHoc.ResetText();
+
+            btnHuy.Enabled = true;
+            btnLuu.Enabled = true;
+
+            btnAddMonHoc.Enabled = false;
+            btnEditMonHoc.Enabled = false;
+            btnDeleteMonHoc.Enabled = false;
+
+            txtMaMonHoc.Focus();
+
+        }
+
+        private void btnLuu_Click(object sender, EventArgs e)
+        {
+            if (!txtMaMonHoc.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Vui lòng nhập thông tin ");
-                txtMaMonHoc.Focus();
+                if (Them)
+                {
+                    try
+                    {
+                        int soTinChi = Convert.ToInt32(txtSoTinChiMonHoc.Text);
+                        LogicMonHoc addMonHoc = new LogicMonHoc();
+                        addMonHoc.ThemMonHoc(this.txtMaMonHoc.Text, this.txtTenMonHoc.Text, soTinChi, ref err);
+                        loadMonHocs();
+                        MessageBox.Show("Đã thêm xong!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thêm được. Lỗi rồi!");
+
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        int soTinChi = Convert.ToInt32(txtSoTinChiMonHoc.Text);
+                        LogicMonHoc capNhatMonHoc = new LogicMonHoc();
+                        capNhatMonHoc.CapNhatMonHoc(this.txtMaMonHoc.Text, this.txtTenMonHoc.Text, soTinChi, ref err);
+                        loadMonHocs();
+                        MessageBox.Show("Cập nhật môn học thành công");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Có lỗi khi cập nhật môn học");
+
+
+                    }
+                }
             }
             else
             {
-                try
-                {
-                    int soTinChi = Convert.ToInt32(txtSoTinChiMonHoc.Text);
-                    LogicMonHoc addMonHoc = new LogicMonHoc();
-                    addMonHoc.ThemMonHoc(this.txtMaMonHoc.Text, this.txtTenMonHoc.Text, soTinChi, ref err);
-                    loadMonHocs();
-                    MessageBox.Show("Đã thêm xong!");
-                }
-                catch
-                {
-                    MessageBox.Show("Không thêm được. Lỗi rồi!");
-
-                }
+                MessageBox.Show("Thông tin chưa có. Lỗi rồi!");
+                txtMaMonHoc.Focus();
             }
-           
-
-
         }
         private void dtgvMonHoc_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -256,30 +368,17 @@ namespace QuanLySinhVien_Final
         }
         private void btnEditMonHoc_Click(object sender, EventArgs e)
         {
-            if (this.txtMaMonHoc.Text.Trim().Equals("") && this.txtTenMonHoc.Text.Trim().Equals(""))
-            {
-                MessageBox.Show("Vui lòng nhập thông tin ");
-                txtMaMonHoc.Focus();
-               
-            }
-            else
-            {
-                try
-                {
-                    int soTinChi = Convert.ToInt32(txtSoTinChiMonHoc.Text);
-                    LogicMonHoc capNhatMonHoc = new LogicMonHoc();
-                    capNhatMonHoc.CapNhatMonHoc(this.txtMaMonHoc.Text, this.txtTenMonHoc.Text, soTinChi, ref err);
-                    loadMonHocs();
-                    MessageBox.Show("Cập nhật môn học thành công");
-                }
-                catch
-                {
-                    MessageBox.Show("Có lỗi khi cập nhật môn học");
+            Them = false;
 
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+            btnAddMonHoc.Enabled = false;
+            btnEditMonHoc.Enabled = false;
+            btnDeleteMonHoc.Enabled = false;
 
-                }
-            }
-          
+            txtMaMonHoc.Enabled = false;
+            txtMaMonHoc.Focus();
+
         }
         private void btnDeleteMonHoc_Click(object sender, EventArgs e)
         {
@@ -310,6 +409,19 @@ namespace QuanLySinhVien_Final
             }
         }
 
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            this.txtMaMonHoc.ResetText();
+            this.txtTenMonHoc.ResetText();
+            this.txtSoTinChiMonHoc.ResetText();
+
+            btnAddMonHoc.Enabled = true;
+            btnEditMonHoc.Enabled = true;
+            btnDeleteMonHoc.Enabled = true;
+
+            btnLuu.Enabled = true;
+            btnHuy.Enabled = true;
+        }
         private void txtSearchMonHoc_TextChanged(object sender, EventArgs e)
         {
             LogicMonHoc searchMonHoc= new LogicMonHoc();
@@ -320,12 +432,13 @@ namespace QuanLySinhVien_Final
             
         }
 
-
-
-
-
         #endregion MonHoc
 
-       
+        private void btnXem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

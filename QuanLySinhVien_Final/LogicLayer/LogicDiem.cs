@@ -41,7 +41,7 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public bool CapNhatDiem(int maSV, int maMH, int maKhoa, float diemQT, float diemThi, ref string err)
         {
-            string query = string.Format("Update Diem Set maMH = '{1}', " + " maKhoa='{2}' " + " diemQT='{3}' " + " diemThi='{4}' "
+            string query = string.Format("Update Diem Set maMH = '{1}', " + " maKhoa='{2}' " + " diemQT='{3}' " + " diemThi='{4}' " +
                 "                                           WHERE maSV = {0}", maSV,maMH,maKhoa,diemQT,diemThi);
 
             return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
