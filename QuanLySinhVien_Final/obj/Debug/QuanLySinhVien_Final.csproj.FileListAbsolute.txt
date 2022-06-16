@@ -11,3 +11,12 @@ D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Deb
 D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.exe
 D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.pdb
 D:\Lap trinh window form\Final\QuanLySinhVien_Final\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmQuanLy.resources
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.AssemblyReference.cache
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmLogin.resources
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmMain.resources
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmQuanLy.resources
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.Properties.Resources.resources
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.GenerateResource.cache
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.CoreCompileInputs.cache
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.exe
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.pdb

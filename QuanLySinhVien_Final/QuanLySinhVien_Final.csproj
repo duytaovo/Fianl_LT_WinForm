@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassQuanLy\Diem.cs" />
+    <Compile Include="ClassQuanLy\Khoa.cs" />
+    <Compile Include="ClassQuanLy\Lop.cs" />
     <Compile Include="ClassQuanLy\MonHoc.cs" />
     <Compile Include="ClassQuanLy\SinhVien.cs" />
     <Compile Include="DBLayer\DBLayer.cs" />
@@ -67,6 +70,9 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="LogicLayer\LogicDiem.cs" />
+    <Compile Include="LogicLayer\LogicKhoa.cs" />
+    <Compile Include="LogicLayer\LogicLop.cs" />
     <Compile Include="LogicLayer\LogicMonHoc.cs" />
     <Compile Include="LogicLayer\LogicSinhVien.cs" />
     <Compile Include="Program.cs" />
