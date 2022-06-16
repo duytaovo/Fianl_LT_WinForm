@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnViewSinhVien = new System.Windows.Forms.Button();
             this.btnAddSinhVien = new System.Windows.Forms.Button();
             this.btnEditSinhVien = new System.Windows.Forms.Button();
@@ -56,21 +56,21 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tpDiem = new System.Windows.Forms.TabPage();
             this.panel51 = new System.Windows.Forms.Panel();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtDiemThi = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtDiemQT = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnTimDiem = new System.Windows.Forms.Button();
             this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox15 = new System.Windows.Forms.TextBox();
+            this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtKhoa = new System.Windows.Forms.TextBox();
+            this.txtLop = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dtgvDiem = new System.Windows.Forms.DataGridView();
             this.MaSVOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaMHOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKhoaOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,10 +79,10 @@
             this.panel50 = new System.Windows.Forms.Panel();
             this.btnHuy_Diem = new System.Windows.Forms.Button();
             this.btnLuu_Diem = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.btnXem = new System.Windows.Forms.Button();
+            this.btnXoaDiem = new System.Windows.Forms.Button();
+            this.btnSuaDiem = new System.Windows.Forms.Button();
+            this.btnThemDiem = new System.Windows.Forms.Button();
+            this.btnXemDiem = new System.Windows.Forms.Button();
             this.tpLop = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
             this.panel54 = new System.Windows.Forms.Panel();
@@ -219,7 +219,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).BeginInit();
             this.tpDiem.SuspendLayout();
             this.panel51.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDiem)).BeginInit();
             this.panel50.SuspendLayout();
             this.tpLop.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -305,34 +305,34 @@
             // 
             // dtgvSinhVien
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvSinhVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.dtgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dtgvSinhVien.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dtgvSinhVien.DefaultCellStyle = dataGridViewCellStyle11;
             this.dtgvSinhVien.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvSinhVien.Location = new System.Drawing.Point(0, 0);
             this.dtgvSinhVien.Name = "dtgvSinhVien";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvSinhVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dtgvSinhVien.RowHeadersWidth = 62;
             this.dtgvSinhVien.Size = new System.Drawing.Size(313, 366);
             this.dtgvSinhVien.TabIndex = 0;
@@ -475,7 +475,7 @@
             // 
             this.tpDiem.BackColor = System.Drawing.Color.Bisque;
             this.tpDiem.Controls.Add(this.panel51);
-            this.tpDiem.Controls.Add(this.dataGridView2);
+            this.tpDiem.Controls.Add(this.dtgvDiem);
             this.tpDiem.Controls.Add(this.panel50);
             this.tpDiem.ForeColor = System.Drawing.Color.OrangeRed;
             this.tpDiem.Location = new System.Drawing.Point(4, 29);
@@ -487,18 +487,18 @@
             // 
             // panel51
             // 
-            this.panel51.Controls.Add(this.textBox19);
+            this.panel51.Controls.Add(this.txtDiemThi);
             this.panel51.Controls.Add(this.label36);
-            this.panel51.Controls.Add(this.textBox18);
+            this.panel51.Controls.Add(this.txtDiemQT);
             this.panel51.Controls.Add(this.label35);
-            this.panel51.Controls.Add(this.button6);
+            this.panel51.Controls.Add(this.btnTimDiem);
             this.panel51.Controls.Add(this.textBox17);
-            this.panel51.Controls.Add(this.textBox16);
+            this.panel51.Controls.Add(this.txtHoTen);
             this.panel51.Controls.Add(this.label34);
-            this.panel51.Controls.Add(this.textBox15);
+            this.panel51.Controls.Add(this.txtMSSV);
             this.panel51.Controls.Add(this.label33);
-            this.panel51.Controls.Add(this.textBox13);
-            this.panel51.Controls.Add(this.textBox12);
+            this.panel51.Controls.Add(this.txtKhoa);
+            this.panel51.Controls.Add(this.txtLop);
             this.panel51.Controls.Add(this.label31);
             this.panel51.Controls.Add(this.label30);
             this.panel51.Location = new System.Drawing.Point(605, 121);
@@ -506,12 +506,12 @@
             this.panel51.Size = new System.Drawing.Size(353, 375);
             this.panel51.TabIndex = 2;
             // 
-            // textBox19
+            // txtDiemThi
             // 
-            this.textBox19.Location = new System.Drawing.Point(140, 268);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(207, 26);
-            this.textBox19.TabIndex = 21;
+            this.txtDiemThi.Location = new System.Drawing.Point(140, 268);
+            this.txtDiemThi.Name = "txtDiemThi";
+            this.txtDiemThi.Size = new System.Drawing.Size(207, 26);
+            this.txtDiemThi.TabIndex = 21;
             // 
             // label36
             // 
@@ -522,12 +522,12 @@
             this.label36.TabIndex = 20;
             this.label36.Text = "Điêm Thi";
             // 
-            // textBox18
+            // txtDiemQT
             // 
-            this.textBox18.Location = new System.Drawing.Point(140, 220);
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(207, 26);
-            this.textBox18.TabIndex = 19;
+            this.txtDiemQT.Location = new System.Drawing.Point(140, 220);
+            this.txtDiemQT.Name = "txtDiemQT";
+            this.txtDiemQT.Size = new System.Drawing.Size(207, 26);
+            this.txtDiemQT.TabIndex = 19;
             // 
             // label35
             // 
@@ -538,14 +538,15 @@
             this.label35.TabIndex = 18;
             this.label35.Text = "Điểm Quá Trình";
             // 
-            // button6
+            // btnTimDiem
             // 
-            this.button6.Location = new System.Drawing.Point(256, -2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(88, 32);
-            this.button6.TabIndex = 4;
-            this.button6.Text = "Tìm";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnTimDiem.Location = new System.Drawing.Point(256, -2);
+            this.btnTimDiem.Name = "btnTimDiem";
+            this.btnTimDiem.Size = new System.Drawing.Size(88, 32);
+            this.btnTimDiem.TabIndex = 4;
+            this.btnTimDiem.Text = "Tìm";
+            this.btnTimDiem.UseVisualStyleBackColor = true;
+            this.btnTimDiem.Click += new System.EventHandler(this.btnTimDiem_Click);
             // 
             // textBox17
             // 
@@ -554,12 +555,12 @@
             this.textBox17.Size = new System.Drawing.Size(138, 26);
             this.textBox17.TabIndex = 17;
             // 
-            // textBox16
+            // txtHoTen
             // 
-            this.textBox16.Location = new System.Drawing.Point(140, 81);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(207, 26);
-            this.textBox16.TabIndex = 15;
+            this.txtHoTen.Location = new System.Drawing.Point(140, 81);
+            this.txtHoTen.Name = "txtHoTen";
+            this.txtHoTen.Size = new System.Drawing.Size(207, 26);
+            this.txtHoTen.TabIndex = 15;
             // 
             // label34
             // 
@@ -570,12 +571,12 @@
             this.label34.TabIndex = 14;
             this.label34.Text = "Họ và tên";
             // 
-            // textBox15
+            // txtMSSV
             // 
-            this.textBox15.Location = new System.Drawing.Point(140, 36);
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(207, 26);
-            this.textBox15.TabIndex = 13;
+            this.txtMSSV.Location = new System.Drawing.Point(140, 36);
+            this.txtMSSV.Name = "txtMSSV";
+            this.txtMSSV.Size = new System.Drawing.Size(207, 26);
+            this.txtMSSV.TabIndex = 13;
             // 
             // label33
             // 
@@ -586,19 +587,19 @@
             this.label33.TabIndex = 11;
             this.label33.Text = "Mã sinh viên";
             // 
-            // textBox13
+            // txtKhoa
             // 
-            this.textBox13.Location = new System.Drawing.Point(140, 121);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(207, 26);
-            this.textBox13.TabIndex = 7;
+            this.txtKhoa.Location = new System.Drawing.Point(140, 121);
+            this.txtKhoa.Name = "txtKhoa";
+            this.txtKhoa.Size = new System.Drawing.Size(207, 26);
+            this.txtKhoa.TabIndex = 7;
             // 
-            // textBox12
+            // txtLop
             // 
-            this.textBox12.Location = new System.Drawing.Point(140, 165);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(207, 26);
-            this.textBox12.TabIndex = 6;
+            this.txtLop.Location = new System.Drawing.Point(140, 165);
+            this.txtLop.Name = "txtLop";
+            this.txtLop.Size = new System.Drawing.Size(207, 26);
+            this.txtLop.TabIndex = 6;
             // 
             // label31
             // 
@@ -618,20 +619,21 @@
             this.label30.TabIndex = 3;
             this.label30.Text = "Khoa";
             // 
-            // dataGridView2
+            // dtgvDiem
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgvDiem.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDiem.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSVOfDiem,
             this.MaMHOfDiem,
             this.MaKhoaOfDiem,
             this.DiemQuaTrinh,
             this.DiemThi});
-            this.dataGridView2.Location = new System.Drawing.Point(31, 121);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(564, 375);
-            this.dataGridView2.TabIndex = 1;
+            this.dtgvDiem.Location = new System.Drawing.Point(31, 121);
+            this.dtgvDiem.Name = "dtgvDiem";
+            this.dtgvDiem.RowHeadersWidth = 51;
+            this.dtgvDiem.Size = new System.Drawing.Size(564, 375);
+            this.dtgvDiem.TabIndex = 1;
+            this.dtgvDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDiem_CellClick);
             // 
             // MaSVOfDiem
             // 
@@ -676,10 +678,10 @@
             // 
             this.panel50.Controls.Add(this.btnHuy_Diem);
             this.panel50.Controls.Add(this.btnLuu_Diem);
-            this.panel50.Controls.Add(this.button9);
-            this.panel50.Controls.Add(this.button8);
-            this.panel50.Controls.Add(this.button7);
-            this.panel50.Controls.Add(this.btnXem);
+            this.panel50.Controls.Add(this.btnXoaDiem);
+            this.panel50.Controls.Add(this.btnSuaDiem);
+            this.panel50.Controls.Add(this.btnThemDiem);
+            this.panel50.Controls.Add(this.btnXemDiem);
             this.panel50.Location = new System.Drawing.Point(31, 24);
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(564, 72);
@@ -693,6 +695,7 @@
             this.btnHuy_Diem.TabIndex = 5;
             this.btnHuy_Diem.Text = "Hủy";
             this.btnHuy_Diem.UseVisualStyleBackColor = true;
+            this.btnHuy_Diem.Click += new System.EventHandler(this.btnHuy_Diem_Click);
             // 
             // btnLuu_Diem
             // 
@@ -702,43 +705,47 @@
             this.btnLuu_Diem.TabIndex = 4;
             this.btnLuu_Diem.Text = "Lưu";
             this.btnLuu_Diem.UseVisualStyleBackColor = true;
+            this.btnLuu_Diem.Click += new System.EventHandler(this.btnLuu_Diem_Click);
             // 
-            // button9
+            // btnXoaDiem
             // 
-            this.button9.Location = new System.Drawing.Point(270, 13);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(70, 43);
-            this.button9.TabIndex = 3;
-            this.button9.Text = "Xóa";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnXoaDiem.Location = new System.Drawing.Point(270, 13);
+            this.btnXoaDiem.Name = "btnXoaDiem";
+            this.btnXoaDiem.Size = new System.Drawing.Size(70, 43);
+            this.btnXoaDiem.TabIndex = 3;
+            this.btnXoaDiem.Text = "Xóa";
+            this.btnXoaDiem.UseVisualStyleBackColor = true;
+            this.btnXoaDiem.Click += new System.EventHandler(this.btnXoaDiem_Click);
             // 
-            // button8
+            // btnSuaDiem
             // 
-            this.button8.Location = new System.Drawing.Point(187, 13);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(77, 43);
-            this.button8.TabIndex = 2;
-            this.button8.Text = "Sửa";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnSuaDiem.Location = new System.Drawing.Point(187, 13);
+            this.btnSuaDiem.Name = "btnSuaDiem";
+            this.btnSuaDiem.Size = new System.Drawing.Size(77, 43);
+            this.btnSuaDiem.TabIndex = 2;
+            this.btnSuaDiem.Text = "Sửa";
+            this.btnSuaDiem.UseVisualStyleBackColor = true;
+            this.btnSuaDiem.Click += new System.EventHandler(this.btnSuaDiem_Click);
             // 
-            // button7
+            // btnThemDiem
             // 
-            this.button7.Location = new System.Drawing.Point(102, 13);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(79, 43);
-            this.button7.TabIndex = 1;
-            this.button7.Text = "Thêm";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnThemDiem.Location = new System.Drawing.Point(102, 13);
+            this.btnThemDiem.Name = "btnThemDiem";
+            this.btnThemDiem.Size = new System.Drawing.Size(79, 43);
+            this.btnThemDiem.TabIndex = 1;
+            this.btnThemDiem.Text = "Thêm";
+            this.btnThemDiem.UseVisualStyleBackColor = true;
+            this.btnThemDiem.Click += new System.EventHandler(this.btnThemDiem_Click);
             // 
-            // btnXem
+            // btnXemDiem
             // 
-            this.btnXem.Location = new System.Drawing.Point(17, 13);
-            this.btnXem.Name = "btnXem";
-            this.btnXem.Size = new System.Drawing.Size(79, 43);
-            this.btnXem.TabIndex = 0;
-            this.btnXem.Text = "Xem";
-            this.btnXem.UseVisualStyleBackColor = true;
-            this.btnXem.Click += new System.EventHandler(this.btnXem_Click);
+            this.btnXemDiem.Location = new System.Drawing.Point(17, 13);
+            this.btnXemDiem.Name = "btnXemDiem";
+            this.btnXemDiem.Size = new System.Drawing.Size(79, 43);
+            this.btnXemDiem.TabIndex = 0;
+            this.btnXemDiem.Text = "Xem";
+            this.btnXemDiem.UseVisualStyleBackColor = true;
+            this.btnXemDiem.Click += new System.EventHandler(this.btnXemDiem_Click);
             // 
             // tpLop
             // 
@@ -1996,7 +2003,7 @@
             this.tpDiem.ResumeLayout(false);
             this.panel51.ResumeLayout(false);
             this.panel51.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDiem)).EndInit();
             this.panel50.ResumeLayout(false);
             this.tpLop.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -2095,31 +2102,31 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TabPage tpDiem;
         private System.Windows.Forms.Panel panel51;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtDiemThi;
         private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtDiemQT;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnTimDiem;
         private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox16;
+        private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox15;
+        private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtKhoa;
+        private System.Windows.Forms.TextBox txtLop;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label30;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dtgvDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSVOfDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaMHOfDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKhoaOfDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemQuaTrinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemThi;
         private System.Windows.Forms.Panel panel50;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button btnXem;
+        private System.Windows.Forms.Button btnXoaDiem;
+        private System.Windows.Forms.Button btnSuaDiem;
+        private System.Windows.Forms.Button btnThemDiem;
+        private System.Windows.Forms.Button btnXemDiem;
         private System.Windows.Forms.TabPage tpLop;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel54;
