@@ -21,6 +21,15 @@ namespace QuanLySinhVien_Final
         DataTable dtMonHoc = null;
         LogicMonHoc dbMonHoc = new LogicMonHoc();
 
+        DataTable dtKhoa = null;
+        LogicKhoa dbKhoa = new LogicKhoa();
+
+        DataTable dtLop = null;
+        LogicLop dbLop = new LogicLop();
+
+        DataTable dtDiem = null;
+        LogicDiem dbDiem = new LogicDiem();
+
         public frmQuanLy()
         {
             InitializeComponent();
@@ -438,7 +447,222 @@ namespace QuanLySinhVien_Final
         {
 
         }
+        #region Khoa
+        private void btnViewKhoa_Click(object sender, EventArgs e)
+        {
+            loadKhoa();
+        }
+        void loadKhoa()
+        {
+            // monHocList.DataSource = LogicMonHoc.Instance.getMonHocs();
+
+            try
+            {
+                dtKhoa = new DataTable();
+                dtKhoa.Clear();
+
+                DataTable dataDisplay = dbKhoa.LayKhoa();
+                dtKhoa = dataDisplay;
+                dtgvKhoa.DataSource = dtKhoa;
+
+                this.txtIDKhoa.ResetText();
+                this.txtTenKhoa.ResetText();
+                this.textBox20.ResetText();
+                this.textBox21.ResetText();
+
+                dtgvKhoa_CellClick(null, null);
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Không lấy được nội dung trong table THANHPHO. Lỗi rồi!!!" + ex);
+            }
+        }
+        private void dtgvKhoa_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgvKhoa.CurrentCell != null)
+            {
+                int r = dtgvKhoa.CurrentCell.RowIndex;
+                // Chuyển thông tin lên panel
+                this.txtIDKhoa.Text = dtgvKhoa.Rows[r].Cells[0].Value.ToString();
+                this.txtTenKhoa.Text =
+                dtgvKhoa.Rows[r].Cells[1].Value.ToString();
+                this.textBox20.Text =
+               dtgvKhoa.Rows[r].Cells[2].Value.ToString();
+                this.textBox21.Text =
+               dtgvKhoa.Rows[r].Cells[3].Value.ToString();
+
+            }
+        }
+
+        private void btnAddKhoa_Click(object sender, EventArgs e)
+        {
+            Them = true;
+
+            txtIDKhoa.Enabled = true;
+            txtTenKhoa.Enabled = true;
+            textBox20.Enabled = true;
+            textBox21.Enabled = true;
+
+            this.txtIDKhoa.ResetText();
+            this.txtTenKhoa.ResetText();
+            this.textBox20.ResetText();
+            this.textBox21.ResetText();
+
+            btnHuy_Khoa.Enabled = true;
+            btnLuu_Khoa.Enabled = true;
+
+            btnAddKhoa.Enabled = false;
+            btnEditKhoa.Enabled = false;
+            BtnDeleteKhoa.Enabled = false;
+
+            txtIDKhoa.Focus();
+        }
+        private void btnEditKhoa_Click(object sender, EventArgs e)
+        {
+            Them = false;
+
+            btnLuu_Khoa.Enabled = true;
+            btnHuy_Khoa.Enabled = true;
+            btnAddKhoa.Enabled = false;
+            btnEditKhoa.Enabled = false;
+            BtnDeleteKhoa.Enabled = false;
+
+            txtIDKhoa.Enabled = false;
+            txtIDKhoa.Focus();
+        }
+
+        private void BtnDeleteKhoa_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc xóa không?", "Trả lời",
+                                       MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (traloi == DialogResult.OK)
+            {
+                try
+                {
+                    int r = dtgvKhoa.CurrentCell.RowIndex;
+                    // Lấy MaKH của record hiện hành
+                    string strThanhPho =
+                    dtgvKhoa.Rows[r].Cells[0].Value.ToString();
+                    // Viết câu lệnh SQL
+                    LogicKhoa xoaKhoa = new LogicKhoa();
+                    xoaKhoa.XoaKhoa(this.txtIDKhoa.Text, ref err);
+                    // Thông báo
+                    loadKhoa();
+                    MessageBox.Show("Đã xóa xong!");
+
+                }
+                catch
+                {
+                    MessageBox.Show("Không xóa được. Lỗi rồi!!!");
+                }
+            }
+        }
+
+        private void btnLuu_Khoa_Click(object sender, EventArgs e)
+        {
+            if (!txtIDKhoa.Text.Trim().Equals(""))
+            {
+                if (Them)
+                {
+                    try
+                    {
+                        int maKhoa = Convert.ToInt32(txtIDKhoa.Text);
+                        int namBatDau = Convert.ToInt32(textBox20.Text);
+                        int namKetThuc = Convert.ToInt32(textBox21.Text);
+                        LogicKhoa addKhoa = new LogicKhoa();
+                        addKhoa.ThemKhoa(maKhoa, this.txtTenKhoa.Text, namBatDau,namKetThuc, ref err);
+                        loadKhoa();
+                        MessageBox.Show("Đã thêm xong!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thêm được. Lỗi rồi!");
+
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        int maKhoa = Convert.ToInt32(txtIDKhoa.Text);
+                        int namBatDau = Convert.ToInt32(textBox20.Text);
+                        int namKetThuc = Convert.ToInt32(textBox21.Text);
+                        LogicKhoa capNhatKhoa = new LogicKhoa();
+                        capNhatKhoa.CapNhatKhoa(maKhoa, this.txtTenKhoa.Text, namBatDau, namKetThuc, ref err);
+                        loadKhoa();
+                        MessageBox.Show("Cập nhật môn học thành công");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Có lỗi khi cập nhật môn học");
 
 
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thông tin chưa có. Lỗi rồi!");
+                txtIDKhoa.Focus();
+            }
+        }
+
+        private void btnHuy_Khoa_Click(object sender, EventArgs e)
+        {
+            this.txtIDKhoa.ResetText();
+            this.txtTenKhoa.ResetText();
+            this.textBox20.ResetText();
+            this.textBox21.ResetText();
+
+            btnAddKhoa.Enabled = true;
+            btnEditKhoa.Enabled = true;
+            BtnDeleteKhoa.Enabled = true;
+
+            btnLuu_Khoa.Enabled = true;
+            btnHuy_Khoa.Enabled = true;
+        }
+
+
+        #endregion
+
+        #region Lop
+        private void btnViewLop_Click(object sender, EventArgs e)
+        {
+
+}
+
+private void btnAddLop_Click(object sender, EventArgs e)
+{
+
+}
+
+private void btnEditLop_Click(object sender, EventArgs e)
+{
+
+        }
+
+        private void btnDeleteLop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLuu_Lop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnHuy_Lop_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        private void tcAdmin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

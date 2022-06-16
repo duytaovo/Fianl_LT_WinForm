@@ -33,3 +33,6 @@ C:\Users\Admin\Downloads\Fianl_LT_WinForm-master\Fianl_LT_WinForm-master\QuanLyS
 C:\Users\Admin\Downloads\Fianl_LT_WinForm-master\Fianl_LT_WinForm-master\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe.config
 C:\Users\Admin\Downloads\Fianl_LT_WinForm-master\Fianl_LT_WinForm-master\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe
 C:\Users\Admin\Downloads\Fianl_LT_WinForm-master\Fianl_LT_WinForm-master\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.pdb
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe.config
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe
+D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.pdb
