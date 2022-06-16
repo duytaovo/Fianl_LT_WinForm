@@ -631,16 +631,42 @@ namespace QuanLySinhVien_Final
         #region Lop
         private void btnViewLop_Click(object sender, EventArgs e)
         {
+            loadLop();
+        }
+        void loadLop()
+        {
+            // monHocList.DataSource = LogicMonHoc.Instance.getMonHocs();
 
-}
+            try
+            {
+                dtLop = new DataTable();
+                dtLop.Clear();
 
-private void btnAddLop_Click(object sender, EventArgs e)
-{
+                DataTable dataDisplay = dbLop.LayLop();
+                dtLop = dataDisplay;
+                dtgvLop.DataSource = dtLop;
 
-}
+                this.txtIDLop.ResetText();
+                this.txtMaKhoa.ResetText();
+                this.txtTenNganh.ResetText();
+                this.txtTenLop.ResetText();
 
-private void btnEditLop_Click(object sender, EventArgs e)
-{
+                dtgvLop_CellClick(null, null);
+
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Không lấy được nội dung trong table THANHPHO. Lỗi rồi!!!" + ex);
+            }
+        }
+
+        private void btnAddLop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnEditLop_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -651,12 +677,82 @@ private void btnEditLop_Click(object sender, EventArgs e)
 
         private void btnLuu_Lop_Click(object sender, EventArgs e)
         {
+            if (!txtIDKhoa.Text.Trim().Equals(""))
+            {
+                if (Them)
+                {
+                    try
+                    {
+                        int maKhoa = Convert.ToInt32(txtIDKhoa.Text);
+                        int namBatDau = Convert.ToInt32(textBox20.Text);
+                        int namKetThuc = Convert.ToInt32(textBox21.Text);
+                        LogicKhoa addKhoa = new LogicKhoa();
+                        addKhoa.ThemKhoa(maKhoa, this.txtTenKhoa.Text, namBatDau, namKetThuc, ref err);
+                        loadKhoa();
+                        MessageBox.Show("Đã thêm xong!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Không thêm được. Lỗi rồi!");
 
+                    }
+                }
+                else
+                {
+                    try
+                    {
+                        int maKhoa = Convert.ToInt32(txtIDKhoa.Text);
+                        int namBatDau = Convert.ToInt32(textBox20.Text);
+                        int namKetThuc = Convert.ToInt32(textBox21.Text);
+                        LogicKhoa capNhatKhoa = new LogicKhoa();
+                        capNhatKhoa.CapNhatKhoa(maKhoa, this.txtTenKhoa.Text, namBatDau, namKetThuc, ref err);
+                        loadKhoa();
+                        MessageBox.Show("Cập nhật môn học thành công");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("Có lỗi khi cập nhật môn học");
+
+
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Thông tin chưa có. Lỗi rồi!");
+                txtIDKhoa.Focus();
+            }
         }
 
         private void btnHuy_Lop_Click(object sender, EventArgs e)
         {
+            this.txtIDLop.ResetText();
+            this.txtMaKhoa.ResetText();
+            this.txtTenNganh.ResetText();
+            this.txtTenLop.ResetText();
 
+            btnAddLop.Enabled = true;
+            btnEditLop.Enabled = true;
+            btnDeleteLop.Enabled = true;
+
+            btnLuu_Lop.Enabled = true;
+            btnHuy_Lop.Enabled = true;
+        }
+        private void dtgvLop_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgvLop.CurrentCell != null)
+            {
+                int r = dtgvLop.CurrentCell.RowIndex;
+                // Chuyển thông tin lên panel
+                this.txtIDLop.Text = dtgvLop.Rows[r].Cells[0].Value.ToString();
+                this.txtMaKhoa.Text =
+                dtgvLop.Rows[r].Cells[1].Value.ToString();
+                this.txtTenNganh.Text =
+               dtgvLop.Rows[r].Cells[2].Value.ToString();
+                this.txtTenLop.Text =
+               dtgvLop.Rows[r].Cells[3].Value.ToString();
+
+            }
         }
         #endregion
 
@@ -664,5 +760,7 @@ private void btnEditLop_Click(object sender, EventArgs e)
         {
 
         }
+
+        
     }
 }
