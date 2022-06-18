@@ -20,19 +20,19 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public DataTable LayMonHocs()
         {
-            return db.ExcuteQueryDataSet("Select * From MonHoc where status = 0", CommandType.Text);
+            return db.ExcuteQueryDataSet("Select maMH,tenMH,soTinChi From MonHoc where status = 0", CommandType.Text);
         }
 
         public bool ThemMonHoc(string MaMonHoc, string TenMonHoc, int SoTinChi, ref string err)
         {
             string sqlString = null;
-            //string query = string.Format("Insert Into MonHoc(maMH,tenMH,soTinChi) VALUES (N'{0}', N'{1}', N'{2}')", MaMonHoc, TenMonHoc, SoTinChi);
+            string query = string.Format("Insert Into MonHoc(maMH,tenMH,soTinChi) VALUES (N'{0}', N'{1}', N'{2}')", MaMonHoc, TenMonHoc, SoTinChi);
 
             sqlString = "Insert Into MonHoc Values('" +
                                              MaMonHoc + "',N'" +
                                              TenMonHoc + "',N'" +
                                              SoTinChi + "')";
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
         }
 
         public bool CapNhatMonHoc(string MaMonHoc, string TenMonHoc, int SoTinChi, ref string err)
@@ -47,9 +47,9 @@ namespace QuanLySinhVien_Final.LogicLayer
         public bool XoaMonHoc(string MaMonHoc, ref string err)
         {
             //string query = string.Format("Delete From MonHoc Where maMH = {0}", MaMonHoc);
-            string query = string.Format("Update MonHoc Set status = 1" +
-               "                                           WHERE maMonHoc = {0}", MaMonHoc);
-            return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
+            string sqlString = "Update MonHoc Set status=N'" +
+            "1" + "' Where maMH='" + MaMonHoc + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
 

@@ -22,7 +22,7 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public DataTable LaySinhViens()
         {
-            return db.ExcuteQueryDataSet("Select * From SinhVien where status = 0", CommandType.Text);
+            return db.ExcuteQueryDataSet("Select maSV,maLop,email,matKhau,hoTen,gioiTinh,soDT,diachi From SinhVien where status = 0", CommandType.Text);
         }
 
         public bool ThemSinhVien(string MaSV,string MaLop,string Email,string MatKhau,string HoTen, string GioiTinh, string SoDT, string DiaChi, ref string err)
@@ -54,9 +54,9 @@ namespace QuanLySinhVien_Final.LogicLayer
 
         public bool XoaSinhVien(string MaSV, ref string err)
         {
-            string query = string.Format("Update SinhVien Set status = 1" +
-                "                                           WHERE maSV = {0}", MaSV);
-            return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
+            string sqlString = "Update SinhVien Set status=N'" +
+           "1" + "' Where maSV='" + MaSV + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
 

@@ -35,7 +35,6 @@ namespace QuanLySinhVien_Final.ClassQuanLy
             this.diemQT = (float)row["diemQT"];
             this.diemThi = (float)row["diemThi"];
 
-
         }
     }
 }

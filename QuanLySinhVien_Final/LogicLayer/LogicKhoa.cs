@@ -28,7 +28,7 @@ namespace QuanLySinhVien_Final.LogicLayer
 
         public DataTable LayKhoa()
         {
-            return db.ExcuteQueryDataSet("Select * From Khoa where status = 0", CommandType.Text);
+            return db.ExcuteQueryDataSet("Select maKhoa,tenKhoa,namBatDau,namKetThuc From Khoa where status = 0", CommandType.Text);
         }
 
         public bool ThemKhoa(int MaKhoa, string TenKhoa, int namBatDau, int namKetThuc, ref string err)
@@ -51,10 +51,9 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public bool XoaKhoa(string MaKhoa, ref string err)
         {
-            string query = string.Format("Update Khoa Set status = 1" +
-             "                                           WHERE maKhoa = {0}", MaKhoa);
-
-            return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
+            string sqlString = "Update Khoa Set status=N'" +
+           "1" + "' Where maKhoa='" + MaKhoa + "'";
+            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
 

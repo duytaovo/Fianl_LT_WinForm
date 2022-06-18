@@ -36,3 +36,16 @@ C:\Users\Admin\Downloads\Fianl_LT_WinForm-master\Fianl_LT_WinForm-master\QuanLyS
 D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe.config
 D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe
 D:\HOC TAP\Lập trình Windows\Project\Final Project\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.pdb
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe.config
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.exe
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\bin\Debug\QuanLySinhVien_Final.pdb
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.AssemblyReference.cache
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.SuggestedBindingRedirects.cache
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmLogin.resources
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmMain.resources
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.frmQuanLy.resources
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.Properties.Resources.resources
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.GenerateResource.cache
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.csproj.CoreCompileInputs.cache
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.exe
+D:\Lap trinh window form\Fianl_LT_WinForm\QuanLySinhVien_Final\obj\Debug\QuanLySinhVien_Final.pdb
