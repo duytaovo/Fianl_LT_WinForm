@@ -20,7 +20,7 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public DataTable LayMonHocs()
         {
-            return db.ExcuteQueryDataSet("Select * From MonHoc", CommandType.Text);
+            return db.ExcuteQueryDataSet("Select * From MonHoc where status = 0", CommandType.Text);
         }
 
         public bool ThemMonHoc(string MaMonHoc, string TenMonHoc, int SoTinChi, ref string err)
@@ -47,9 +47,9 @@ namespace QuanLySinhVien_Final.LogicLayer
         public bool XoaMonHoc(string MaMonHoc, ref string err)
         {
             //string query = string.Format("Delete From MonHoc Where maMH = {0}", MaMonHoc);
-            string sqlString = "Delete From MonHoc Where maMH='" + MaMonHoc + "'";
-
-            return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
+            string query = string.Format("Update MonHoc Set status = 1" +
+               "                                           WHERE maMonHoc = {0}", MaMonHoc);
+            return db.MyExecuteNonQuery(query, CommandType.Text, ref err);
 
         }
 
