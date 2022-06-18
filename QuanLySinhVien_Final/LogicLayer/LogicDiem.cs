@@ -27,7 +27,7 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public DataTable LayDiem()
         {
-            return db.ExcuteQueryDataSet("Select * From Diem", CommandType.Text);
+            return db.ExcuteQueryDataSet("Select maMH,maSV,maKhoa,diemQT,diemThi From Diem where status = 0", CommandType.Text);
         }
         public bool ThemDiem(int maSV, int maMH, int maKhoa, float diemQT, float diemThi, ref string err)
         {
@@ -48,8 +48,8 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public bool XoaDiem(string maSV, ref string err)
         {
-            string sqlString = "Delete From Diem Where maSV='" + maSV + "'";
-
+            string sqlString = "Update Diem Set status=N'" +
+            "1" + "' Where maSV='" + maSV + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }

@@ -281,7 +281,7 @@ namespace QuanLySinhVien_Final
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Không lấy được nội dung trong table THANHPHO. Lỗi rồi!!!" + ex);
+                MessageBox.Show("Không lấy được nội dung trong table. Lỗi rồi!!!" + ex);
             }
         }
 
@@ -454,7 +454,6 @@ namespace QuanLySinhVien_Final
         }
         void loadKhoa()
         {
-            // monHocList.DataSource = LogicMonHoc.Instance.getMonHocs();
 
             try
             {
@@ -646,7 +645,7 @@ namespace QuanLySinhVien_Final
                 dtLop = dataDisplay;
                 dtgvLop.DataSource = dtLop;
 
-                this.txtIDLop.ResetText();
+                this.txtMa_Lop.ResetText();
                 this.txtMaKhoa.ResetText();
                 this.txtTenNganh.ResetText();
                 this.txtTenLop.ResetText();
@@ -664,12 +663,12 @@ namespace QuanLySinhVien_Final
         {
             Them = true;
 
-            txtIDLop.Enabled = true;
+            txtMa_Lop.Enabled = true;
             txtMaKhoa.Enabled = true;
             txtTenNganh.Enabled = true;
             txtTenLop.Enabled = true;
 
-            this.txtIDLop.ResetText();
+            this.txtMa_Lop.ResetText();
             this.txtMaKhoa.ResetText();
             this.txtTenNganh.ResetText();
             this.txtTenLop.ResetText();
@@ -681,7 +680,7 @@ namespace QuanLySinhVien_Final
             btnEditLop.Enabled = false;
             btnDeleteLop.Enabled = false;
 
-            txtIDLop.Focus();
+            txtMa_Lop.Focus();
         }
 
         private void btnEditLop_Click(object sender, EventArgs e)
@@ -694,8 +693,8 @@ namespace QuanLySinhVien_Final
             btnEditLop.Enabled = false;
             btnDeleteLop.Enabled = false;
 
-            txtIDLop.Enabled = false;
-            txtIDLop.Focus();
+            txtMa_Lop.Enabled = false;
+            txtMa_Lop.Focus();
         }
 
         private void btnDeleteLop_Click(object sender, EventArgs e)
@@ -714,7 +713,7 @@ namespace QuanLySinhVien_Final
                     dtgvLop.Rows[r].Cells[0].Value.ToString();
                     // Viết câu lệnh SQL
                     LogicLop xoaLop = new LogicLop();
-                    xoaLop.XoaLop(this.txtIDLop.Text, ref err);
+                    xoaLop.XoaLop(this.txtMa_Lop.Text, ref err);
                     // Thông báo
                     loadLop();
                     MessageBox.Show("Đã xóa xong!");
@@ -729,13 +728,13 @@ namespace QuanLySinhVien_Final
 
         private void btnLuu_Lop_Click(object sender, EventArgs e)
         {
-            if (!txtIDLop.Text.Trim().Equals(""))
+            if (!txtMa_Lop.Text.Trim().Equals(""))
             {
                 if (Them)
                 {
                     try
                     {
-                        int id = Convert.ToInt32(txtIDLop.Text);
+                        int id = Convert.ToInt32(txtMa_Lop.Text);
                         int maKhoa = Convert.ToInt32(txtMaKhoa.Text);
                         LogicLop addLop = new LogicLop();
                         addLop.ThemLop(id,maKhoa, txtTenNganh.Text,txtTenLop.Text, ref err);
@@ -752,7 +751,7 @@ namespace QuanLySinhVien_Final
                 {
                     try
                     {
-                        int id = Convert.ToInt32(txtIDLop.Text);
+                        int id = Convert.ToInt32(txtMa_Lop.Text);
                         int maKhoa = Convert.ToInt32(txtMaKhoa.Text);
                         LogicLop capNhatLop = new LogicLop();
                         capNhatLop.CapNhatLop(id, maKhoa, txtTenNganh.Text, txtTenLop.Text, ref err);
@@ -768,13 +767,13 @@ namespace QuanLySinhVien_Final
             else
             {
                 MessageBox.Show("Thông tin chưa có. Lỗi rồi!");
-                txtIDLop.Focus();
+                txtMa_Lop.Focus();
             }
         }
 
         private void btnHuy_Lop_Click(object sender, EventArgs e)
         {
-            this.txtIDLop.ResetText();
+            this.txtMa_Lop.ResetText();
             this.txtMaKhoa.ResetText();
             this.txtTenNganh.ResetText();
             this.txtTenLop.ResetText();
@@ -792,13 +791,10 @@ namespace QuanLySinhVien_Final
             {
                 int r = dtgvLop.CurrentCell.RowIndex;
                 // Chuyển thông tin lên panel
-                this.txtIDLop.Text = dtgvLop.Rows[r].Cells[0].Value.ToString();
-                this.txtMaKhoa.Text =
-                dtgvLop.Rows[r].Cells[1].Value.ToString();
-                this.txtTenNganh.Text =
-               dtgvLop.Rows[r].Cells[2].Value.ToString();
-                this.txtTenLop.Text =
-               dtgvLop.Rows[r].Cells[3].Value.ToString();
+                this.txtMa_Lop.Text = dtgvLop.Rows[r].Cells[0].Value.ToString();
+                this.txtMaKhoa.Text = dtgvLop.Rows[r].Cells[1].Value.ToString();
+                this.txtTenNganh.Text = dtgvLop.Rows[r].Cells[2].Value.ToString();
+                this.txtTenLop.Text = dtgvLop.Rows[r].Cells[3].Value.ToString();
 
             }
         }
@@ -821,9 +817,8 @@ namespace QuanLySinhVien_Final
                 dtgvDiem.DataSource = dtDiem;
 
                 this.txtMSSV.ResetText();
-                this.txtHoTen.ResetText();
+                this.txtMaMH.ResetText();
                 this.txtKhoa.ResetText();
-                this.txtLop.ResetText();
                 this.txtDiemQT.ResetText();
                 this.txtDiemThi.ResetText();
                 
@@ -842,17 +837,14 @@ namespace QuanLySinhVien_Final
             {
                 int r = dtgvDiem.CurrentCell.RowIndex;
                 // Chuyển thông tin lên panel
-                this.txtMSSV.Text = dtgvLop.Rows[r].Cells[0].Value.ToString();
-                this.txtHoTen.Text =
-                dtgvLop.Rows[r].Cells[1].Value.ToString();
-                this.txtKhoa.Text =
-               dtgvLop.Rows[r].Cells[2].Value.ToString();
-                this.txtLop.Text =
-               dtgvLop.Rows[r].Cells[3].Value.ToString();
+                this.txtMaMH.Text = dtgvDiem.Rows[r].Cells[0].Value.ToString();
+                this.txtMSSV.Text =
+                dtgvDiem.Rows[r].Cells[1].Value.ToString();
+                this.txtKhoa.Text =dtgvDiem.Rows[r].Cells[2].Value.ToString();
                 this.txtDiemQT.Text =
-               dtgvLop.Rows[r].Cells[4].Value.ToString();
+               dtgvDiem.Rows[r].Cells[3].Value.ToString();
                 this.txtDiemThi.Text =
-               dtgvLop.Rows[r].Cells[5].Value.ToString();
+               dtgvDiem.Rows[r].Cells[4].Value.ToString();
 
             }
         }
@@ -861,16 +853,14 @@ namespace QuanLySinhVien_Final
             Them = true;
 
             this.txtMSSV.Enabled = true;
-            this.txtHoTen.Enabled = true;
+            this.txtMaMH.Enabled = true;
             this.txtKhoa.Enabled = true;
-            this.txtLop.Enabled = true;
             this.txtDiemQT.Enabled = true;
             this.txtDiemThi.Enabled = true;
 
             this.txtMSSV.ResetText();
-            this.txtHoTen.ResetText();
+            this.txtMaMH.ResetText();
             this.txtKhoa.ResetText();
-            this.txtLop.ResetText();
             this.txtDiemQT.ResetText();
             this.txtDiemThi.ResetText();
 
@@ -971,16 +961,15 @@ namespace QuanLySinhVien_Final
             else
             {
                 MessageBox.Show("Thông tin chưa có. Lỗi rồi!");
-                txtIDLop.Focus();
+                txtMa_Lop.Focus();
             }
         }
 
         private void btnHuy_Diem_Click(object sender, EventArgs e)
         {
             this.txtMSSV.ResetText();
-            this.txtHoTen.ResetText();
+            this.txtMaMH.ResetText();
             this.txtKhoa.ResetText();
-            this.txtLop.ResetText();
             this.txtDiemQT.ResetText();
             this.txtDiemThi.ResetText();
 

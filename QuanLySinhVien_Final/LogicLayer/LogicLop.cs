@@ -27,7 +27,7 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public DataTable LayLop()
         {
-            return db.ExcuteQueryDataSet("Select * From Lop", CommandType.Text);
+            return db.ExcuteQueryDataSet("Select maLop,maKhoa,tenLop From Lop where status = 0", CommandType.Text);
         }
 
         public bool ThemLop(int MaLop, int maNganh, string tenNganh, string tenLop, ref string err)
@@ -49,8 +49,8 @@ namespace QuanLySinhVien_Final.LogicLayer
         }
         public bool XoaLop(string MaLop, ref string err)
         {
-            string sqlString = "Delete From Lop Where maLop='" + MaLop + "'";
-
+            string sqlString = "Update Lop Set status=N'" +
+           "1" + "' Where maLop='" + MaLop + "'";
             return db.MyExecuteNonQuery(sqlString, CommandType.Text, ref err);
 
         }
