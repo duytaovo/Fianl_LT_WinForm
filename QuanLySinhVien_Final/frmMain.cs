@@ -56,5 +56,41 @@ namespace QuanLySinhVien_Final
         {
 
         }
+
+        private void xuatDSMonHocToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportMH frmReportMH = new frmReportMH();
+            frmReportMH.Show();
+        }
+
+        private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMain.bIsLogin = false;
+            frmMain_Load(null, null);
+        }
+
+        private void thoátToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Chắc không?", "Trả lời",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+                Close();
+        }
+
+        private void xuatDSSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReportDSSV frmReportDSSV = new frmReportDSSV();
+            frmReportDSSV.Show();
+        }
+
+        private void xemDiemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult traloi;
+            traloi = MessageBox.Show("Vào Tác Vụ Để Xem Điểm", "Trả lời",
+                MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (traloi == DialogResult.OK)
+                Close();
+        }
     }
 }

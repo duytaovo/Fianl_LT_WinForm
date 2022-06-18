@@ -56,7 +56,9 @@
             this.label11 = new System.Windows.Forms.Label();
             this.tpDiem = new System.Windows.Forms.TabPage();
             this.panel51 = new System.Windows.Forms.Panel();
+            this.btnHuy_Diem = new System.Windows.Forms.Button();
             this.txtDiemThi = new System.Windows.Forms.TextBox();
+            this.btnLuu_Diem = new System.Windows.Forms.Button();
             this.label36 = new System.Windows.Forms.Label();
             this.txtDiemQT = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
@@ -68,18 +70,23 @@
             this.txtKhoa = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.dtgvDiem = new System.Windows.Forms.DataGridView();
+            this.MaMHOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSVOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaKhoaOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel50 = new System.Windows.Forms.Panel();
-            this.btnHuy_Diem = new System.Windows.Forms.Button();
-            this.btnLuu_Diem = new System.Windows.Forms.Button();
             this.btnXoaDiem = new System.Windows.Forms.Button();
             this.btnSuaDiem = new System.Windows.Forms.Button();
             this.btnThemDiem = new System.Windows.Forms.Button();
             this.btnXemDiem = new System.Windows.Forms.Button();
             this.tpLop = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.btnHuy_Lop = new System.Windows.Forms.Button();
             this.panel54 = new System.Windows.Forms.Panel();
             this.label39 = new System.Windows.Forms.Label();
             this.txtTenLop = new System.Windows.Forms.TextBox();
+            this.btnLuu_Lop = new System.Windows.Forms.Button();
             this.panel49 = new System.Windows.Forms.Panel();
             this.label29 = new System.Windows.Forms.Label();
             this.txtMaKhoa = new System.Windows.Forms.TextBox();
@@ -87,6 +94,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtTenNganh = new System.Windows.Forms.TextBox();
             this.panel38 = new System.Windows.Forms.Panel();
+            this.txtMa_Lop = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.panel39 = new System.Windows.Forms.Panel();
             this.dtgvLop = new System.Windows.Forms.DataGridView();
@@ -95,17 +103,17 @@
             this.TenNganhOfLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel40 = new System.Windows.Forms.Panel();
-            this.btnHuy_Lop = new System.Windows.Forms.Button();
-            this.btnLuu_Lop = new System.Windows.Forms.Button();
             this.btnDeleteLop = new System.Windows.Forms.Button();
             this.btnEditLop = new System.Windows.Forms.Button();
             this.btnAddLop = new System.Windows.Forms.Button();
             this.btnViewLop = new System.Windows.Forms.Button();
             this.tpKhoa = new System.Windows.Forms.TabPage();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHuy_Khoa = new System.Windows.Forms.Button();
             this.panel53 = new System.Windows.Forms.Panel();
             this.label38 = new System.Windows.Forms.Label();
             this.textBox21 = new System.Windows.Forms.TextBox();
+            this.btnLuu_Khoa = new System.Windows.Forms.Button();
             this.panel52 = new System.Windows.Forms.Panel();
             this.label37 = new System.Windows.Forms.Label();
             this.textBox20 = new System.Windows.Forms.TextBox();
@@ -122,17 +130,17 @@
             this.NamBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NamKetThuc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel32 = new System.Windows.Forms.Panel();
-            this.btnHuy_Khoa = new System.Windows.Forms.Button();
-            this.btnLuu_Khoa = new System.Windows.Forms.Button();
             this.BtnDeleteKhoa = new System.Windows.Forms.Button();
             this.btnEditKhoa = new System.Windows.Forms.Button();
             this.btnAddKhoa = new System.Windows.Forms.Button();
             this.btnViewKhoa = new System.Windows.Forms.Button();
             this.tpSinhVien = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnHuy_SV = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txtMaSV = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnLuu_SV = new System.Windows.Forms.Button();
             this.panel27 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
@@ -172,8 +180,6 @@
             this.DienThoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel44 = new System.Windows.Forms.Panel();
-            this.btnHuy_SV = new System.Windows.Forms.Button();
-            this.btnLuu_SV = new System.Windows.Forms.Button();
             this.btnXoaSV = new System.Windows.Forms.Button();
             this.btnSuaSV = new System.Windows.Forms.Button();
             this.btnThemSV = new System.Windows.Forms.Button();
@@ -183,12 +189,14 @@
             this.txtSearchSV = new System.Windows.Forms.TextBox();
             this.tpMonHoc = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnHuy = new System.Windows.Forms.Button();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtSoTinChiMonHoc = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.txtTenMonHoc = new System.Windows.Forms.TextBox();
+            this.btnLuu = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtMaMonHoc = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -200,19 +208,11 @@
             this.TenMonHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoTinChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.btnDeleteMonHoc = new System.Windows.Forms.Button();
-            this.btnLuu = new System.Windows.Forms.Button();
             this.btnEditMonHoc = new System.Windows.Forms.Button();
             this.btnAddMonHoc = new System.Windows.Forms.Button();
             this.btnViewMonHoc = new System.Windows.Forms.Button();
             this.tcAdmin = new System.Windows.Forms.TabControl();
-            this.MaMHOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSVOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaKhoaOfDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemQuaTrinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiemThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtMa_Lop = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSinhVien)).BeginInit();
             this.tpDiem.SuspendLayout();
             this.panel51.SuspendLayout();
@@ -502,12 +502,32 @@
             this.panel51.Size = new System.Drawing.Size(357, 394);
             this.panel51.TabIndex = 2;
             // 
+            // btnHuy_Diem
+            // 
+            this.btnHuy_Diem.Location = new System.Drawing.Point(245, 285);
+            this.btnHuy_Diem.Name = "btnHuy_Diem";
+            this.btnHuy_Diem.Size = new System.Drawing.Size(66, 43);
+            this.btnHuy_Diem.TabIndex = 5;
+            this.btnHuy_Diem.Text = "Hủy";
+            this.btnHuy_Diem.UseVisualStyleBackColor = true;
+            this.btnHuy_Diem.Click += new System.EventHandler(this.btnHuy_Diem_Click);
+            // 
             // txtDiemThi
             // 
             this.txtDiemThi.Location = new System.Drawing.Point(140, 242);
             this.txtDiemThi.Name = "txtDiemThi";
             this.txtDiemThi.Size = new System.Drawing.Size(207, 23);
             this.txtDiemThi.TabIndex = 21;
+            // 
+            // btnLuu_Diem
+            // 
+            this.btnLuu_Diem.Location = new System.Drawing.Point(150, 285);
+            this.btnLuu_Diem.Name = "btnLuu_Diem";
+            this.btnLuu_Diem.Size = new System.Drawing.Size(66, 43);
+            this.btnLuu_Diem.TabIndex = 4;
+            this.btnLuu_Diem.Text = "Lưu";
+            this.btnLuu_Diem.UseVisualStyleBackColor = true;
+            this.btnLuu_Diem.Click += new System.EventHandler(this.btnLuu_Diem_Click);
             // 
             // label36
             // 
@@ -606,6 +626,46 @@
             this.dtgvDiem.TabIndex = 1;
             this.dtgvDiem.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDiem_CellClick);
             // 
+            // MaMHOfDiem
+            // 
+            this.MaMHOfDiem.DataPropertyName = "maMH";
+            this.MaMHOfDiem.HeaderText = "Mã Môn Học";
+            this.MaMHOfDiem.MinimumWidth = 6;
+            this.MaMHOfDiem.Name = "MaMHOfDiem";
+            this.MaMHOfDiem.Width = 125;
+            // 
+            // MaSVOfDiem
+            // 
+            this.MaSVOfDiem.DataPropertyName = "maSV";
+            this.MaSVOfDiem.HeaderText = "Mã SV";
+            this.MaSVOfDiem.MinimumWidth = 6;
+            this.MaSVOfDiem.Name = "MaSVOfDiem";
+            this.MaSVOfDiem.Width = 125;
+            // 
+            // MaKhoaOfDiem
+            // 
+            this.MaKhoaOfDiem.DataPropertyName = "maKhoa";
+            this.MaKhoaOfDiem.HeaderText = "Mã Khóa";
+            this.MaKhoaOfDiem.MinimumWidth = 6;
+            this.MaKhoaOfDiem.Name = "MaKhoaOfDiem";
+            this.MaKhoaOfDiem.Width = 125;
+            // 
+            // DiemQuaTrinh
+            // 
+            this.DiemQuaTrinh.DataPropertyName = "diemQT";
+            this.DiemQuaTrinh.HeaderText = "Điểm Quá Trình";
+            this.DiemQuaTrinh.MinimumWidth = 6;
+            this.DiemQuaTrinh.Name = "DiemQuaTrinh";
+            this.DiemQuaTrinh.Width = 125;
+            // 
+            // DiemThi
+            // 
+            this.DiemThi.DataPropertyName = "diemThi";
+            this.DiemThi.HeaderText = "Điểm Thi";
+            this.DiemThi.MinimumWidth = 6;
+            this.DiemThi.Name = "DiemThi";
+            this.DiemThi.Width = 125;
+            // 
             // panel50
             // 
             this.panel50.Controls.Add(this.btnXoaDiem);
@@ -616,26 +676,6 @@
             this.panel50.Name = "panel50";
             this.panel50.Size = new System.Drawing.Size(564, 72);
             this.panel50.TabIndex = 0;
-            // 
-            // btnHuy_Diem
-            // 
-            this.btnHuy_Diem.Location = new System.Drawing.Point(245, 285);
-            this.btnHuy_Diem.Name = "btnHuy_Diem";
-            this.btnHuy_Diem.Size = new System.Drawing.Size(66, 43);
-            this.btnHuy_Diem.TabIndex = 5;
-            this.btnHuy_Diem.Text = "Hủy";
-            this.btnHuy_Diem.UseVisualStyleBackColor = true;
-            this.btnHuy_Diem.Click += new System.EventHandler(this.btnHuy_Diem_Click);
-            // 
-            // btnLuu_Diem
-            // 
-            this.btnLuu_Diem.Location = new System.Drawing.Point(150, 285);
-            this.btnLuu_Diem.Name = "btnLuu_Diem";
-            this.btnLuu_Diem.Size = new System.Drawing.Size(66, 43);
-            this.btnLuu_Diem.TabIndex = 4;
-            this.btnLuu_Diem.Text = "Lưu";
-            this.btnLuu_Diem.UseVisualStyleBackColor = true;
-            this.btnLuu_Diem.Click += new System.EventHandler(this.btnLuu_Diem_Click);
             // 
             // btnXoaDiem
             // 
@@ -704,6 +744,16 @@
             this.panel13.Size = new System.Drawing.Size(323, 366);
             this.panel13.TabIndex = 15;
             // 
+            // btnHuy_Lop
+            // 
+            this.btnHuy_Lop.Location = new System.Drawing.Point(215, 254);
+            this.btnHuy_Lop.Name = "btnHuy_Lop";
+            this.btnHuy_Lop.Size = new System.Drawing.Size(75, 43);
+            this.btnHuy_Lop.TabIndex = 1;
+            this.btnHuy_Lop.Text = "Hủy";
+            this.btnHuy_Lop.UseVisualStyleBackColor = true;
+            this.btnHuy_Lop.Click += new System.EventHandler(this.btnHuy_Lop_Click);
+            // 
             // panel54
             // 
             this.panel54.Controls.Add(this.label39);
@@ -728,6 +778,16 @@
             this.txtTenLop.Name = "txtTenLop";
             this.txtTenLop.Size = new System.Drawing.Size(157, 23);
             this.txtTenLop.TabIndex = 0;
+            // 
+            // btnLuu_Lop
+            // 
+            this.btnLuu_Lop.Location = new System.Drawing.Point(130, 254);
+            this.btnLuu_Lop.Name = "btnLuu_Lop";
+            this.btnLuu_Lop.Size = new System.Drawing.Size(75, 43);
+            this.btnLuu_Lop.TabIndex = 1;
+            this.btnLuu_Lop.Text = "Lưu";
+            this.btnLuu_Lop.UseVisualStyleBackColor = true;
+            this.btnLuu_Lop.Click += new System.EventHandler(this.btnLuu_Lop_Click);
             // 
             // panel49
             // 
@@ -787,6 +847,13 @@
             this.panel38.Name = "panel38";
             this.panel38.Size = new System.Drawing.Size(286, 46);
             this.panel38.TabIndex = 2;
+            // 
+            // txtMa_Lop
+            // 
+            this.txtMa_Lop.Location = new System.Drawing.Point(126, 10);
+            this.txtMa_Lop.Name = "txtMa_Lop";
+            this.txtMa_Lop.Size = new System.Drawing.Size(157, 23);
+            this.txtMa_Lop.TabIndex = 2;
             // 
             // label19
             // 
@@ -860,26 +927,6 @@
             this.panel40.Size = new System.Drawing.Size(746, 69);
             this.panel40.TabIndex = 13;
             // 
-            // btnHuy_Lop
-            // 
-            this.btnHuy_Lop.Location = new System.Drawing.Point(215, 254);
-            this.btnHuy_Lop.Name = "btnHuy_Lop";
-            this.btnHuy_Lop.Size = new System.Drawing.Size(75, 43);
-            this.btnHuy_Lop.TabIndex = 1;
-            this.btnHuy_Lop.Text = "Hủy";
-            this.btnHuy_Lop.UseVisualStyleBackColor = true;
-            this.btnHuy_Lop.Click += new System.EventHandler(this.btnHuy_Lop_Click);
-            // 
-            // btnLuu_Lop
-            // 
-            this.btnLuu_Lop.Location = new System.Drawing.Point(130, 254);
-            this.btnLuu_Lop.Name = "btnLuu_Lop";
-            this.btnLuu_Lop.Size = new System.Drawing.Size(75, 43);
-            this.btnLuu_Lop.TabIndex = 1;
-            this.btnLuu_Lop.Text = "Lưu";
-            this.btnLuu_Lop.UseVisualStyleBackColor = true;
-            this.btnLuu_Lop.Click += new System.EventHandler(this.btnLuu_Lop_Click);
-            // 
             // btnDeleteLop
             // 
             this.btnDeleteLop.Location = new System.Drawing.Point(259, 16);
@@ -947,6 +994,16 @@
             this.panel1.Size = new System.Drawing.Size(308, 366);
             this.panel1.TabIndex = 9;
             // 
+            // btnHuy_Khoa
+            // 
+            this.btnHuy_Khoa.Location = new System.Drawing.Point(211, 261);
+            this.btnHuy_Khoa.Name = "btnHuy_Khoa";
+            this.btnHuy_Khoa.Size = new System.Drawing.Size(75, 39);
+            this.btnHuy_Khoa.TabIndex = 1;
+            this.btnHuy_Khoa.Text = "Hủy";
+            this.btnHuy_Khoa.UseVisualStyleBackColor = true;
+            this.btnHuy_Khoa.Click += new System.EventHandler(this.btnHuy_Khoa_Click);
+            // 
             // panel53
             // 
             this.panel53.Controls.Add(this.label38);
@@ -971,6 +1028,16 @@
             this.textBox21.Name = "textBox21";
             this.textBox21.Size = new System.Drawing.Size(157, 23);
             this.textBox21.TabIndex = 0;
+            // 
+            // btnLuu_Khoa
+            // 
+            this.btnLuu_Khoa.Location = new System.Drawing.Point(130, 261);
+            this.btnLuu_Khoa.Name = "btnLuu_Khoa";
+            this.btnLuu_Khoa.Size = new System.Drawing.Size(75, 39);
+            this.btnLuu_Khoa.TabIndex = 1;
+            this.btnLuu_Khoa.Text = "Lưu";
+            this.btnLuu_Khoa.UseVisualStyleBackColor = true;
+            this.btnLuu_Khoa.Click += new System.EventHandler(this.btnLuu_Khoa_Click);
             // 
             // panel52
             // 
@@ -1112,26 +1179,6 @@
             this.panel32.Size = new System.Drawing.Size(632, 69);
             this.panel32.TabIndex = 7;
             // 
-            // btnHuy_Khoa
-            // 
-            this.btnHuy_Khoa.Location = new System.Drawing.Point(211, 261);
-            this.btnHuy_Khoa.Name = "btnHuy_Khoa";
-            this.btnHuy_Khoa.Size = new System.Drawing.Size(75, 39);
-            this.btnHuy_Khoa.TabIndex = 1;
-            this.btnHuy_Khoa.Text = "Hủy";
-            this.btnHuy_Khoa.UseVisualStyleBackColor = true;
-            this.btnHuy_Khoa.Click += new System.EventHandler(this.btnHuy_Khoa_Click);
-            // 
-            // btnLuu_Khoa
-            // 
-            this.btnLuu_Khoa.Location = new System.Drawing.Point(130, 261);
-            this.btnLuu_Khoa.Name = "btnLuu_Khoa";
-            this.btnLuu_Khoa.Size = new System.Drawing.Size(75, 39);
-            this.btnLuu_Khoa.TabIndex = 1;
-            this.btnLuu_Khoa.Text = "Lưu";
-            this.btnLuu_Khoa.UseVisualStyleBackColor = true;
-            this.btnLuu_Khoa.Click += new System.EventHandler(this.btnLuu_Khoa_Click);
-            // 
             // BtnDeleteKhoa
             // 
             this.BtnDeleteKhoa.Location = new System.Drawing.Point(259, 16);
@@ -1206,6 +1253,16 @@
             this.panel11.Size = new System.Drawing.Size(318, 459);
             this.panel11.TabIndex = 9;
             // 
+            // btnHuy_SV
+            // 
+            this.btnHuy_SV.Location = new System.Drawing.Point(182, 412);
+            this.btnHuy_SV.Name = "btnHuy_SV";
+            this.btnHuy_SV.Size = new System.Drawing.Size(75, 42);
+            this.btnHuy_SV.TabIndex = 1;
+            this.btnHuy_SV.Text = "Hủy";
+            this.btnHuy_SV.UseVisualStyleBackColor = true;
+            this.btnHuy_SV.Click += new System.EventHandler(this.btnHuy_SV_Click);
+            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.txtMaSV);
@@ -1230,6 +1287,16 @@
             this.label4.Size = new System.Drawing.Size(22, 15);
             this.label4.TabIndex = 1;
             this.label4.Text = "ID:";
+            // 
+            // btnLuu_SV
+            // 
+            this.btnLuu_SV.Location = new System.Drawing.Point(87, 412);
+            this.btnLuu_SV.Name = "btnLuu_SV";
+            this.btnLuu_SV.Size = new System.Drawing.Size(75, 42);
+            this.btnLuu_SV.TabIndex = 1;
+            this.btnLuu_SV.Text = "Lưu";
+            this.btnLuu_SV.UseVisualStyleBackColor = true;
+            this.btnLuu_SV.Click += new System.EventHandler(this.btnLuu_SV_Click);
             // 
             // panel27
             // 
@@ -1494,7 +1561,7 @@
             this.dtgvSV.Location = new System.Drawing.Point(0, 6);
             this.dtgvSV.Name = "dtgvSV";
             this.dtgvSV.RowHeadersWidth = 62;
-            this.dtgvSV.Size = new System.Drawing.Size(637, 403);
+            this.dtgvSV.Size = new System.Drawing.Size(638, 403);
             this.dtgvSV.TabIndex = 0;
             this.dtgvSV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvSV_CellClick);
             // 
@@ -1572,26 +1639,6 @@
             this.panel44.Name = "panel44";
             this.panel44.Size = new System.Drawing.Size(655, 63);
             this.panel44.TabIndex = 7;
-            // 
-            // btnHuy_SV
-            // 
-            this.btnHuy_SV.Location = new System.Drawing.Point(182, 412);
-            this.btnHuy_SV.Name = "btnHuy_SV";
-            this.btnHuy_SV.Size = new System.Drawing.Size(75, 42);
-            this.btnHuy_SV.TabIndex = 1;
-            this.btnHuy_SV.Text = "Hủy";
-            this.btnHuy_SV.UseVisualStyleBackColor = true;
-            this.btnHuy_SV.Click += new System.EventHandler(this.btnHuy_SV_Click);
-            // 
-            // btnLuu_SV
-            // 
-            this.btnLuu_SV.Location = new System.Drawing.Point(87, 412);
-            this.btnLuu_SV.Name = "btnLuu_SV";
-            this.btnLuu_SV.Size = new System.Drawing.Size(75, 42);
-            this.btnLuu_SV.TabIndex = 1;
-            this.btnLuu_SV.Text = "Lưu";
-            this.btnLuu_SV.UseVisualStyleBackColor = true;
-            this.btnLuu_SV.Click += new System.EventHandler(this.btnLuu_SV_Click);
             // 
             // btnXoaSV
             // 
@@ -1687,6 +1734,16 @@
             this.panel5.Size = new System.Drawing.Size(374, 366);
             this.panel5.TabIndex = 3;
             // 
+            // btnHuy
+            // 
+            this.btnHuy.Location = new System.Drawing.Point(238, 229);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(75, 40);
+            this.btnHuy.TabIndex = 5;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
             // panel9
             // 
             this.panel9.Controls.Add(this.label3);
@@ -1736,6 +1793,16 @@
             this.txtTenMonHoc.Name = "txtTenMonHoc";
             this.txtTenMonHoc.Size = new System.Drawing.Size(168, 23);
             this.txtTenMonHoc.TabIndex = 0;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Location = new System.Drawing.Point(145, 229);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 40);
+            this.btnLuu.TabIndex = 5;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // panel7
             // 
@@ -1835,16 +1902,6 @@
             this.panel2.Size = new System.Drawing.Size(637, 69);
             this.panel2.TabIndex = 0;
             // 
-            // btnHuy
-            // 
-            this.btnHuy.Location = new System.Drawing.Point(238, 229);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 40);
-            this.btnHuy.TabIndex = 5;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
             // btnDeleteMonHoc
             // 
             this.btnDeleteMonHoc.Location = new System.Drawing.Point(277, 16);
@@ -1854,16 +1911,6 @@
             this.btnDeleteMonHoc.Text = "Xóa";
             this.btnDeleteMonHoc.UseVisualStyleBackColor = true;
             this.btnDeleteMonHoc.Click += new System.EventHandler(this.btnDeleteMonHoc_Click);
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Location = new System.Drawing.Point(145, 229);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 40);
-            this.btnLuu.TabIndex = 5;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnEditMonHoc
             // 
@@ -1910,53 +1957,6 @@
             this.tcAdmin.Size = new System.Drawing.Size(989, 581);
             this.tcAdmin.TabIndex = 1;
             this.tcAdmin.SelectedIndexChanged += new System.EventHandler(this.tcAdmin_SelectedIndexChanged);
-            // 
-            // MaMHOfDiem
-            // 
-            this.MaMHOfDiem.DataPropertyName = "maMH";
-            this.MaMHOfDiem.HeaderText = "Mã Môn Học";
-            this.MaMHOfDiem.MinimumWidth = 6;
-            this.MaMHOfDiem.Name = "MaMHOfDiem";
-            this.MaMHOfDiem.Width = 125;
-            // 
-            // MaSVOfDiem
-            // 
-            this.MaSVOfDiem.DataPropertyName = "maSV";
-            this.MaSVOfDiem.HeaderText = "Mã SV";
-            this.MaSVOfDiem.MinimumWidth = 6;
-            this.MaSVOfDiem.Name = "MaSVOfDiem";
-            this.MaSVOfDiem.Width = 125;
-            // 
-            // MaKhoaOfDiem
-            // 
-            this.MaKhoaOfDiem.DataPropertyName = "maKhoa";
-            this.MaKhoaOfDiem.HeaderText = "Mã Khóa";
-            this.MaKhoaOfDiem.MinimumWidth = 6;
-            this.MaKhoaOfDiem.Name = "MaKhoaOfDiem";
-            this.MaKhoaOfDiem.Width = 125;
-            // 
-            // DiemQuaTrinh
-            // 
-            this.DiemQuaTrinh.DataPropertyName = "diemQT";
-            this.DiemQuaTrinh.HeaderText = "Điểm Quá Trình";
-            this.DiemQuaTrinh.MinimumWidth = 6;
-            this.DiemQuaTrinh.Name = "DiemQuaTrinh";
-            this.DiemQuaTrinh.Width = 125;
-            // 
-            // DiemThi
-            // 
-            this.DiemThi.DataPropertyName = "diemThi";
-            this.DiemThi.HeaderText = "Điểm Thi";
-            this.DiemThi.MinimumWidth = 6;
-            this.DiemThi.Name = "DiemThi";
-            this.DiemThi.Width = 125;
-            // 
-            // txtMa_Lop
-            // 
-            this.txtMa_Lop.Location = new System.Drawing.Point(126, 10);
-            this.txtMa_Lop.Name = "txtMa_Lop";
-            this.txtMa_Lop.Size = new System.Drawing.Size(157, 23);
-            this.txtMa_Lop.TabIndex = 2;
             // 
             // frmQuanLy
             // 

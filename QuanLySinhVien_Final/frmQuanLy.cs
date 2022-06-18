@@ -281,7 +281,7 @@ namespace QuanLySinhVien_Final
             }
             catch (SqlException ex)
             {
-                MessageBox.Show("Không lấy được nội dung trong table THANHPHO. Lỗi rồi!!!" + ex);
+                MessageBox.Show("Không lấy được nội dung trong table. Lỗi rồi!!!" + ex);
             }
         }
 
